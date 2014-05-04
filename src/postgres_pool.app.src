@@ -1,0 +1,18 @@
+%% -*- erlang -*-
+{application, postgres_pool,
+ [{description, "Postgres Pool Example"},
+  {vsn, "0.1.0"},
+  {registered, [postgres_pool_sup]},
+  {mod, {postgres_pool_app, []}},
+  {start_phases, []},
+  {applications, [
+                 kernel
+                 ,stdlib
+                 ,sasl
+                 ,lager
+                 ,crypto
+                 ,pgsql
+                 ,episcina                 
+                 ]},
+  {env, []}
+ ]}.
